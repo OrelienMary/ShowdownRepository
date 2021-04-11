@@ -33,8 +33,6 @@ public class PlayerNameInputField : MonoBehaviour
     /// </summary>
     void Start()
     {
-
-
         string defaultName = string.Empty;
         InputField _inputField = this.GetComponent<InputField>();
         if (_inputField != null)
@@ -46,7 +44,6 @@ public class PlayerNameInputField : MonoBehaviour
             }
         }
 
-
         PhotonNetwork.NickName = defaultName;
     }
 
@@ -55,7 +52,6 @@ public class PlayerNameInputField : MonoBehaviour
 
 
     #region Public Methods
-
 
     /// <summary>
     /// Sets the name of the player, and save it in the PlayerPrefs for future sessions.
@@ -71,10 +67,8 @@ public class PlayerNameInputField : MonoBehaviour
         }
         PhotonNetwork.NickName = value;
 
-
         PlayerPrefs.SetString(playerNamePrefKey, value);
     }
-
 
     #endregion
 }
