@@ -30,14 +30,14 @@ public class PlayerManager : MonoBehaviourPun, IPunObservable
         if (stream.IsWriting)
         {
             // We own this player: send the others our data
-            //stream.SendNext(healthManager.maxHealth);
-            //stream.SendNext(healthManager.currentHealth);
+            stream.SendNext(healthManager.maxHealth);
+            stream.SendNext(healthManager.currentHealth);
         }
         else
         {
             // Network player, receive data
-            //healthManager.maxHealth = (int)stream.ReceiveNext();
-            //healthManager.currentHealth = (int)stream.ReceiveNext();
+            healthManager.maxHealth = (int)stream.ReceiveNext();
+            healthManager.currentHealth = (int)stream.ReceiveNext();
         }
     }
 }

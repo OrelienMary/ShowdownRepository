@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     #region Private Methods
 
+    public GameObject instantiatePositionP2;
+
     private void Start()
     {
         if (playerPrefab == null)
@@ -46,7 +48,8 @@ public class GameManager : MonoBehaviourPunCallbacks
             {
                 Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
                 // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-                PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0f, 5f, 0f), Quaternion.identity, 0);
+                GameObject go = PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0f, 5f, 0f), Quaternion.identity, 0);
+                go.transform.position = instantiatePositionP2.transform.position;
             }
             else
             {
