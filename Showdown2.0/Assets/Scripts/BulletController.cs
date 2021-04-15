@@ -30,7 +30,6 @@ public class BulletController : MonoBehaviour
         if(lifeTime < 0)
         {
             Destroy(gameObject);
-            
         }
     }
 

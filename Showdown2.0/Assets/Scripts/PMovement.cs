@@ -2,8 +2,7 @@
 
 public class PMovement : MonoBehaviour
 {
-    [HideInInspector] public float horizontal;
-    [HideInInspector] public float vertical;
+    public PlayerInput playerInput;
 
     public float speed;
 
@@ -18,12 +17,6 @@ public class PMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical");
-
-        Debug.Log(horizontal);
-        Debug.Log(vertical);
-
-        rb.velocity = new Vector3(horizontal, 0f, vertical).normalized * speed;
+        rb.velocity = new Vector3(playerInput.horizontal, 0f, playerInput.vertical).normalized * speed;
     }
 }

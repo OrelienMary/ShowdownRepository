@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class AttaqueTest : MonoBehaviour
 {
+    public PlayerInput playerInput;
+
     public GameObject prefabBullet;
 
     public AnimationCurve velocityOverLifetime;
 
     public Collider col;
+
+    public int inputIndex;
 
     // Start is called before the first frame update
     void Start()
@@ -19,11 +23,12 @@ public class AttaqueTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (playerInput.competencesInputs[inputIndex])
         {
-
            Attaque();
         }
+
+        playerInput.competencesInputs[inputIndex] = false;
     }
 
     public void Attaque()
