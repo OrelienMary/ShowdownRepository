@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff0257710aa3ba14388aa1ba19ac1880, type: 3}
+  m_Name: BaseBullet
+  m_EditorClassIdentifier: 
+  playerManager: {fileID: 0}
+  cooldownTime: 0
+  castTime: 2
+  castEffect: 0
+  casting: 0
+  stunDuringEffect: 0
+  recoveryTime: 2
+  recoveryEffect: 0
+  recovering: 0
+  isSlow: 0
+  isStopped: 0
+  baseSpeed: 0
+  speedOverLifetime:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  size: 0
+  bulletToInstantiate: {fileID: 0}

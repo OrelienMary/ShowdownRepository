@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
+[CreateAssetMenu(menuName = "BulletAttack")]
 public class BulletAttack : Competence
 {
     public float baseSpeed;
@@ -10,5 +10,12 @@ public class BulletAttack : Competence
 
     public float size;
 
-    public BulletAttack[] bulletAttack;
+    public BulletAttack bulletToInstantiate;
+
+    public override IEnumerator DoCompetence()
+    {
+        Debug.Log("bullet attack");
+
+        yield return base.DoCompetence();
+    }
 }

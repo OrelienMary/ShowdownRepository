@@ -2,7 +2,7 @@
 
 public class PMovement : MonoBehaviour
 {
-    public PlayerInput playerInput;
+    public PlayerManager playerManager;
 
     public float speed;
 
@@ -17,6 +17,6 @@ public class PMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector3(playerInput.horizontal, 0f, playerInput.vertical).normalized * speed;
+        rb.velocity = new Vector3(playerManager.playerInput.horizontal, 0f, playerManager.playerInput.vertical).normalized * speed;
     }
 }

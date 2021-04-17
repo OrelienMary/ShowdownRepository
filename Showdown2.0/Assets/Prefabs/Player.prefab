@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 4178627937069961234}
   - component: {fileID: 4178627937069961233}
   - component: {fileID: 4178627937069961232}
-  - component: {fileID: 4178627937069961245}
-  - component: {fileID: 4178627937069961246}
-  - component: {fileID: 4178627937069961247}
   - component: {fileID: 892015332}
+  - component: {fileID: 4178627937069961245}
+  - component: {fileID: 4178627937069961247}
+  - component: {fileID: 6671192168193252746}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -117,6 +117,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &892015332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4178627937069961239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca30ed7f38bcf9a4b9b3ba0290266f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInput: {fileID: 4178627937069961247}
+  pMovement: {fileID: 4178627937069961245}
+  slowed: 0
+  stopped: 0
+  maxHealth: 0
+  currentHealth: 0
 --- !u!114 &4178627937069961245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,67 +147,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1dc5652e86482e459a875ccfd6cfe84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInput: {fileID: 4178627937069961247}
+  playerManager: {fileID: 892015332}
   speed: 5
   rb: {fileID: 4178627937069961232}
---- !u!114 &4178627937069961246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4178627937069961239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7711f564f039fe34eaf130dc91c941ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerInput: {fileID: 4178627937069961247}
-  prefabBullet: {fileID: 7290033593211575813, guid: f043745fb10f9b04393190bb0a3dfc93, type: 3}
-  velocityOverLifetime:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0.5
-      inSlope: -1.0352473
-      outSlope: -1.0352473
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.35880098
-      value: 0.12855224
-      inSlope: -0.0058090026
-      outSlope: -0.0058090026
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.24047096
-    - serializedVersion: 3
-      time: 0.6683313
-      value: 0.25072098
-      inSlope: -0.002704564
-      outSlope: -0.002704564
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.9874878
-      value: 0.02122192
-      inSlope: -0.0070747826
-      outSlope: -0.0070747826
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.2532742
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  col: {fileID: 4178627937069961233}
-  inputIndex: 0
 --- !u!114 &4178627937069961247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,7 +167,7 @@ MonoBehaviour:
   inputPattern: 0
   aimDirection: {x: 0, y: 0, z: 0}
   competencesInputs: 000000
---- !u!114 &892015332
+--- !u!114 &6671192168193252746
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,9 +176,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4178627937069961239}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca30ed7f38bcf9a4b9b3ba0290266f28, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fa67be295ea8d741be2d4fa95ab256f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stun: 0
-  maxHealth: 0
-  currentHealth: 0
+  playerManager: {fileID: 892015332}
+  inputIndex: 0
+  competenceData: {fileID: 11400000, guid: 912898a020b9fd84a9f3caefe74c2ad0, type: 2}
