@@ -13,22 +13,42 @@ MonoBehaviour:
   m_Name: BaseBullet
   m_EditorClassIdentifier: 
   playerManager: {fileID: 0}
-  cooldownTime: 0
-  castTime: 2
-  castEffect: 0
+  cooldownTime: 1
+  cooldownTimer: 0
+  castTime: 0.5
+  castEffect: 1
   casting: 0
-  stunDuringEffect: 0
+  stunDuringEffect: 1
   recoveryTime: 2
-  recoveryEffect: 0
+  recoveryEffect: 2
   recovering: 0
   isSlow: 0
   isStopped: 0
-  baseSpeed: 0
+  baseSpeed: 5
   speedOverLifetime:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   size: 0
   bulletToInstantiate: {fileID: 0}
+  bulletPrefab: {fileID: 7290033593211575813, guid: f043745fb10f9b04393190bb0a3dfc93, type: 3}

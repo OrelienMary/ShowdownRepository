@@ -7,9 +7,12 @@ public class PlayerManager : MonoBehaviour
     public PlayerInput playerInput;
     public PMovement pMovement;
 
+    public Collider hitCollider;
+
     [HideInInspector] public bool slowed;
     [HideInInspector] public bool stopped;
 
     public int maxHealth;
     [HideInInspector] public int currentHealth;
+
 }

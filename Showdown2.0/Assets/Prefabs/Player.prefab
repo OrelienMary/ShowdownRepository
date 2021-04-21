@@ -131,6 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInput: {fileID: 4178627937069961247}
   pMovement: {fileID: 4178627937069961245}
+  hitCollider: {fileID: 4178627937069961233}
   slowed: 0
   stopped: 0
   maxHealth: 0
@@ -149,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerManager: {fileID: 892015332}
   speed: 5
+  speedMultiplier: 0
   rb: {fileID: 4178627937069961232}
 --- !u!114 &4178627937069961247
 MonoBehaviour:
@@ -182,3 +184,4 @@ MonoBehaviour:
   playerManager: {fileID: 892015332}
   inputIndex: 0
   competenceData: {fileID: 11400000, guid: 912898a020b9fd84a9f3caefe74c2ad0, type: 2}
+  competenceInstance: {fileID: 0}

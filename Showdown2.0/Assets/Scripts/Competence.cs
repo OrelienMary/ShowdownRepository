@@ -8,6 +8,7 @@ public class Competence : ScriptableObject
     [HideInInspector] public PlayerManager playerManager;
 
     public float cooldownTime;
+    [HideInInspector] public float cooldownTimer;
 
     public float castTime;
     public int castEffect;
@@ -38,7 +39,6 @@ public class Competence : ScriptableObject
             {
                 isStopped = true;
             }
-            Debug.Log("casting");
             yield return new WaitForFixedUpdate();
         }
 
@@ -63,15 +63,15 @@ public class Competence : ScriptableObject
 
         for (float i = 0; i < castTime; i += Time.fixedDeltaTime)
         {
-            if (castEffect == 1)
+            if (recoveryEffect == 1)
             {
                 isSlow = true;
             }
-            else if (castEffect == 2)
+            else if (recoveryEffect == 2)
             {
                 isStopped = true;
             }
-            Debug.Log("recovering");
+
             yield return new WaitForFixedUpdate();
         }
 
@@ -79,5 +79,15 @@ public class Competence : ScriptableObject
         isStopped = false;
 
         recovering = false;
+
+        playerManager.StartCoroutine(DoCooldown());
+    }
+
+    public IEnumerator DoCooldown()
+    {
+        for (cooldownTimer = cooldownTime; cooldownTimer > 0f; cooldownTimer -= Time.fixedDeltaTime)
+        {
+            yield return new WaitForFixedUpdate();
+        }
     }
 }

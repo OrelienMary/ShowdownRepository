@@ -34,12 +34,10 @@ public class PlayerInput : MonoBehaviour
             aimDirection = new Vector2(Input.GetAxis("HorizontalRight" + inputPattern), Input.GetAxis("VerticalRight" + inputPattern));
         }
 
-        if(competencesInputs[0] == false)
-            competencesInputs[0] = Input.GetButtonDown("Attack1" + inputPattern);
-        if(competencesInputs[1] == false)
-            competencesInputs[1] = Input.GetButtonDown("Attack2" + inputPattern);
+            competencesInputs[0] = Input.GetButton("Attack1" + inputPattern);
 
-        if(competencesInputs[2] == false)
-            competencesInputs[2] = Input.GetButtonDown("Defense" + inputPattern);
+            competencesInputs[1] = Input.GetButton("Attack2" + inputPattern);
+
+            competencesInputs[2] = Input.GetButton("Defense" + inputPattern);
     }
 }

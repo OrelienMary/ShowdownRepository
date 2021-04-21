@@ -9,7 +9,7 @@ public class CompetenceSlot : MonoBehaviour
     public int inputIndex;
 
     public Competence competenceData;
-    Competence competenceInstance;
+    [HideInInspector] public Competence competenceInstance;
 
     // Start is called before the first frame update
     void Start()
@@ -22,9 +22,14 @@ public class CompetenceSlot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerManager.playerInput.competencesInputs[inputIndex])
+        playerManager.stopped = competenceInstance.isStopped;
+        playerManager.slowed = competenceInstance.isSlow;
+
+        if (playerManager.playerInput.competencesInputs[inputIndex] && competenceInstance.cooldownTimer <= 0 && playerManager.slowed == false && playerManager.stopped == false && competenceInstance.casting == false)
         {
             StartCoroutine(competenceInstance.DoCast());
         }
+
+        playerManager.playerInput.competencesInputs[inputIndex] = false;
     }
 }
