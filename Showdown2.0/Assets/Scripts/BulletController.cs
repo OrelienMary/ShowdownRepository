@@ -11,18 +11,25 @@ public class BulletController : MonoBehaviour
     public float lifeTime;
     public float baseVelocity;
     public AnimationCurve velocityMultiplierOverLifeTime;
+    public float size;
 
     float originalLifeTime;
+
+    
 
     private void Start()
     {
         originalLifeTime = lifeTime;
+
+        transform.localScale = new Vector3(size, size, size);
 
         //StartCoroutine(StreamPosition(0.1f));
     }
 
     private void FixedUpdate()
     {
+        transform.localScale = new Vector3(size, size, size);
+
         rb.velocity = direction * baseVelocity * velocityMultiplierOverLifeTime.Evaluate(originalLifeTime - lifeTime);
 
         lifeTime -= Time.fixedDeltaTime;
@@ -37,6 +44,10 @@ public class BulletController : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+            PlayerManager pm = other.GetComponent<PlayerManager>();
+
+            pm.TakeDamage();    
+
             Destroy(gameObject);
         }
     }

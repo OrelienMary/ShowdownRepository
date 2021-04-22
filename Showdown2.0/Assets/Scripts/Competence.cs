@@ -15,7 +15,7 @@ public class Competence : ScriptableObject
 
     [HideInInspector] public bool casting;
 
-    public bool stunDuringEffect;
+    [HideInInspector] public bool stunDuringEffect;
 
     public float recoveryTime;
     public int recoveryEffect;
@@ -29,7 +29,7 @@ public class Competence : ScriptableObject
     {
         casting = true;
 
-        for(float i = 0; i < castTime; i += Time.fixedDeltaTime)
+        for(float i = 0; i <= castTime; i += Time.fixedDeltaTime)
         {
             if(castEffect == 1)
             {
@@ -61,7 +61,7 @@ public class Competence : ScriptableObject
     {
         recovering = true;
 
-        for (float i = 0; i < castTime; i += Time.fixedDeltaTime)
+        for (float i = 0; i <= recoveryTime; i += Time.fixedDeltaTime)
         {
             if (recoveryEffect == 1)
             {

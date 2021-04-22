@@ -9,6 +9,7 @@ public class BulletAttack : Competence
     public AnimationCurve speedOverLifetime;
 
     public float size;
+    public float lifeTime;
 
     public BulletAttack bulletToInstantiate;
 
@@ -22,17 +23,17 @@ public class BulletAttack : Competence
 
         BulletController bc =  Instantiate(bulletPrefab, playerManager.transform.position, Quaternion.identity).GetComponent<BulletController>();
 
-        bc.gameObject.SetActive(true);
-
         bc.transform.position = playerManager.transform.position + (attaqueDirection * 1.5f);
 
         bc.direction = attaqueDirection;
 
         bc.velocityMultiplierOverLifeTime = speedOverLifetime;
 
-        bc.baseVelocity = 50f;
+        bc.baseVelocity = baseSpeed;
 
-        bc.lifeTime = 1f;
+        bc.lifeTime = lifeTime;
+
+        bc.size = size;
 
         bc.StartCoroutine(IgnoreCollisionsFor(bc.GetComponent<Collider>(), 0.2f));
 

@@ -10,45 +10,64 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff0257710aa3ba14388aa1ba19ac1880, type: 3}
-  m_Name: BaseBullet
+  m_Name: SniperAccelerator
   m_EditorClassIdentifier: 
   playerManager: {fileID: 0}
-  cooldownTime: 1
+  cooldownTime: 2
   cooldownTimer: 0
   castTime: 0.5
   castEffect: 1
   casting: 0
-  stunDuringEffect: 1
-  recoveryTime: 2
-  recoveryEffect: 2
+  stunDuringEffect: 0
+  recoveryTime: 1
+  recoveryEffect: 1
   recovering: 0
   isSlow: 0
   isStopped: 0
-  baseSpeed: 5
+  baseSpeed: 22
   speedOverLifetime:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
+      time: 0.012863159
+      value: 0.08325195
+      inSlope: 0.59105533
+      outSlope: 0.59105533
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.18191001
+      value: 0.183168
+      inSlope: 0.32060027
+      outSlope: 0.32060027
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.5602642
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.3828948
+      value: 0.8621416
+      inSlope: 0.33961612
+      outSlope: 0.33961612
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.71079904
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: 0.22339529
+      outSlope: 0.22339529
       tangentMode: 34
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  size: 0
+  size: 0.7
+  lifeTime: 5
   bulletToInstantiate: {fileID: 0}
   bulletPrefab: {fileID: 7290033593211575813, guid: f043745fb10f9b04393190bb0a3dfc93, type: 3}

@@ -22,10 +22,11 @@ public class CompetenceSlot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerManager.stopped = competenceInstance.isStopped;
-        playerManager.slowed = competenceInstance.isSlow;
+        playerManager.competencesStopped[inputIndex] = competenceInstance.isStopped;
+        playerManager.competencesSlowed[inputIndex] = competenceInstance.isSlow;
+        playerManager.competencesStunned[inputIndex] = competenceInstance.stunDuringEffect;
 
-        if (playerManager.playerInput.competencesInputs[inputIndex] && competenceInstance.cooldownTimer <= 0 && playerManager.slowed == false && playerManager.stopped == false && competenceInstance.casting == false)
+        if (playerManager.playerInput.competencesInputs[inputIndex] && competenceInstance.cooldownTimer <= 0 && playerManager.slowed == false && playerManager.stopped == false && competenceInstance.casting == false && competenceInstance.recovering == false)
         {
             StartCoroutine(competenceInstance.DoCast());
         }

@@ -20,7 +20,7 @@ public class PMovement : MonoBehaviour
     {
         if(playerManager.stopped)
         {
-            speedMultiplier = 0f;
+            speedMultiplier = 0.15f;
 
         }
         else if(playerManager.slowed)
@@ -32,7 +32,7 @@ public class PMovement : MonoBehaviour
             speedMultiplier = 1f;
         }
         
-
-        rb.velocity = new Vector3(playerManager.playerInput.horizontal, 0f, playerManager.playerInput.vertical).normalized * speed * speedMultiplier;
+        if(playerManager.stunned == false)
+            rb.velocity = new Vector3(playerManager.playerInput.horizontal, 0f, playerManager.playerInput.vertical).normalized * speed * speedMultiplier;
     }
 }
