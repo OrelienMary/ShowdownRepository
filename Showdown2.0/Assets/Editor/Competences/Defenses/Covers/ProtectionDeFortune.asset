@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 452efa983a0e1cd49a63086bd163c5f9, type: 3}
+  m_Name: ProtectionDeFortune
+  m_EditorClassIdentifier: 
+  playerManager: {fileID: 0}
+  cooldownTime: 4
+  cooldownTimer: 0
+  castTime: 0.5
+  castEffect: 1
+  casting: 0
+  stunDuringEffect: 0
+  recoveryTime: 0
+  recoveryEffect: 0
+  recovering: 0
+  competencing: 0
+  isSlow: 0
+  isStopped: 0
+  coverPrefab: {fileID: 4244462563110614476, guid: 79b45dc737e9d5a46940c066c1bfb0d4, type: 3}
+  size: 1
+  distance: 1.5
+  coverLife: 2

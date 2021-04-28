@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
+    public PlayerManager playerManager;
+
     [HideInInspector] public float horizontal;
     [HideInInspector] public float vertical;
 
@@ -11,9 +13,17 @@ public class PlayerInput : MonoBehaviour
 
     [HideInInspector] public Vector3 aimDirection;
 
-    [HideInInspector] public bool[] competencesInputs;
+    public bool[] competencesInputs;
+
+    public bool switchInput;
+    public bool phaseInput;
 
     public LayerMask mouseLayer;
+
+    private void Start()
+    {
+        aimDirection = Vector3.forward;
+    }
 
     // Update is called once per frame
     void Update()
@@ -29,13 +39,12 @@ public class PlayerInput : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 100.0f,mouseLayer,QueryTriggerInteraction.Collide))
             {
                 aimDirection = (hit.point - transform.position).normalized;
-
-                aimDirection = new Vector3(aimDirection.x, aimDirection.z, 0f);
             }
         }
         else
         {
-            aimDirection = new Vector2(Input.GetAxis("HorizontalRight" + inputPattern), Input.GetAxis("VerticalRight" + inputPattern)).normalized;
+            if(new Vector3(Input.GetAxis("HorizontalRight" + inputPattern), 0f, Input.GetAxis("VerticalRight" + inputPattern)).magnitude > 0.1f)
+                aimDirection = new Vector3(Input.GetAxis("HorizontalRight" + inputPattern), 0f, Input.GetAxis("VerticalRight" + inputPattern)).normalized;
         }
 
         if(inputPattern == 0)
@@ -59,5 +68,24 @@ public class PlayerInput : MonoBehaviour
 
         competencesInputs[2] = Input.GetButton("Defense" + inputPattern);
 
+        switchInput = Input.GetButton("Switch" + inputPattern);
+
+        if(Input.GetButton("Phase1"+inputPattern) && Input.GetButton("Phase2" + inputPattern))
+        {
+            phaseInput = true;
+        }
+        else
+        {
+            phaseInput = false;
+        }
+
+        if (competencesInputs[0] || competencesInputs[1])
+        {
+            playerManager.anim.SetBool("Casting", true);
+        }
+        else
+        {
+            playerManager.anim.SetBool("Casting", false);
+        }
     }
 }

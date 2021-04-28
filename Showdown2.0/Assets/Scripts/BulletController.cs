@@ -50,6 +50,11 @@ public class BulletController : MonoBehaviour
 
             Destroy(gameObject);
         }
+
+        if (other.tag == "Cover")
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

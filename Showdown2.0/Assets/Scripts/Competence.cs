@@ -22,11 +22,15 @@ public class Competence : ScriptableObject
 
     [HideInInspector] public bool recovering;
 
+    [HideInInspector] public bool competencing;
+
     [HideInInspector] public bool isSlow;
     [HideInInspector] public bool isStopped;
 
     public IEnumerator DoCast()
     {
+        competencing = true;
+
         casting = true;
 
         for(float i = 0; i <= castTime; i += Time.fixedDeltaTime)
@@ -80,6 +84,8 @@ public class Competence : ScriptableObject
 
         recovering = false;
 
+        competencing = false;
+
         playerManager.StartCoroutine(DoCooldown());
     }
 
@@ -89,5 +95,7 @@ public class Competence : ScriptableObject
         {
             yield return new WaitForFixedUpdate();
         }
+
+
     }
 }
