@@ -1221,7 +1221,7 @@ MonoBehaviour:
   buildNumber: 0
   switchCooldown: 5
   switchCooldownTimer: 0
-  percentageSpeedHealth: 0
+  percentageSpeedHealth: 1
   currentHealth: 0
   renderer: {fileID: 1266817206970835083}
   normalMaterial: {fileID: -4565884009001823619, guid: 49d24d9b2d2cae54185726f50cbd85fa, type: 3}
@@ -1230,6 +1230,7 @@ MonoBehaviour:
   invincibleMaterial: {fileID: 2100000, guid: 6a910aeb7935c8c45bd12cf4b74b44db, type: 2}
   speedingMaterial: {fileID: 2100000, guid: c53ae004fc2d1954fbce67099c008944, type: 2}
   playerUI: {fileID: 0}
+  menuUI: {fileID: 0}
   healthText: {fileID: 0}
 --- !u!114 &4178627937069961245
 MonoBehaviour:
@@ -1303,6 +1304,7 @@ MonoBehaviour:
   competencesInputs: 000000
   switchInput: 0
   phaseInput: 0
+  menuInput: 0
   mouseLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -1320,8 +1322,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerManager: {fileID: 892015332}
   inputIndex: 0
-  competenceData1: {fileID: 11400000, guid: ee5337a83615a2949b2621d362b09ad8, type: 2}
-  competenceData2: {fileID: 11400000, guid: d851a270072111f42b30c812b317a403, type: 2}
+  competenceData1: {fileID: 11400000, guid: 912898a020b9fd84a9f3caefe74c2ad0, type: 2}
+  competenceData2: {fileID: 11400000, guid: 912898a020b9fd84a9f3caefe74c2ad0, type: 2}
   currentCompetenceInstance: {fileID: 0}
   competenceInstance1: {fileID: 0}
   competenceInstance2: {fileID: 0}
@@ -1339,8 +1341,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerManager: {fileID: 892015332}
   inputIndex: 1
-  competenceData1: {fileID: 11400000, guid: 716569d336f01314487038a6c86797a9, type: 2}
-  competenceData2: {fileID: 11400000, guid: 2e6298a8adf64a545b2e6e344285ae40, type: 2}
+  competenceData1: {fileID: 11400000, guid: 912898a020b9fd84a9f3caefe74c2ad0, type: 2}
+  competenceData2: {fileID: 11400000, guid: 912898a020b9fd84a9f3caefe74c2ad0, type: 2}
   currentCompetenceInstance: {fileID: 0}
   competenceInstance1: {fileID: 0}
   competenceInstance2: {fileID: 0}
@@ -1358,8 +1360,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerManager: {fileID: 892015332}
   inputIndex: 2
-  competenceData1: {fileID: 11400000, guid: e9fe62ef80855f44689969075e0f3e92, type: 2}
-  competenceData2: {fileID: 11400000, guid: c5e984fbd3f8de74dbdb2eb4951f5b50, type: 2}
+  competenceData1: {fileID: 11400000, guid: 7936112c2f07a5047b224ba419168246, type: 2}
+  competenceData2: {fileID: 11400000, guid: 7936112c2f07a5047b224ba419168246, type: 2}
   currentCompetenceInstance: {fileID: 0}
   competenceInstance1: {fileID: 0}
   competenceInstance2: {fileID: 0}
@@ -1376,10 +1378,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 892015332}
-  newCompetences:
-  - {fileID: 11400000, guid: bcb0f4547b793b844bd6e4d423c61254, type: 2}
-  - {fileID: 11400000, guid: 444f01f02fd4b244eaa58990a8df8fcd, type: 2}
-  - {fileID: 11400000, guid: 36c7f02b363994a42a3c3a1d9ba40292, type: 2}
+  newCompetences1: []
+  newCompetences2: []
   newPercentageSpeedHealth: 0.5
   inPhase2: 0
 --- !u!1 &4228174433250364247
