@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TripleShot
   m_EditorClassIdentifier: 
   playerManager: {fileID: 0}
-  cooldownTime: 0.7
+  cooldownTime: 0.5
   cooldownTimer: 0
   castTime: 0
   castEffect: 0
@@ -25,7 +25,7 @@ MonoBehaviour:
   competencing: 0
   isSlow: 0
   isStopped: 0
-  baseSpeed: 10
+  baseSpeed: 20
   speedOverLifetime:
     serializedVersion: 2
     m_Curve:
@@ -34,24 +34,24 @@ MonoBehaviour:
       value: 1
       inSlope: 0
       outSlope: 0
-      tangentMode: 34
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.4924242
     - serializedVersion: 3
       time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 34
+      value: 0
+      inSlope: -0.004338672
+      outSlope: -0.004338672
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0
-      outWeight: 0
+      inWeight: 0.33333334
+      outWeight: 1
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  size: 0.6
-  lifeTime: 5
+  size: 1
+  lifeTime: 1
   bulletsAngle:
   - floatArray:
     - -20

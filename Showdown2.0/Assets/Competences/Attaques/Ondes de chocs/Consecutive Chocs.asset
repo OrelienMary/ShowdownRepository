@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Consecutive Chocs
   m_EditorClassIdentifier: 
   playerManager: {fileID: 0}
-  cooldownTime: 5
+  cooldownTime: 2
   cooldownTimer: 0
   castTime: 1
   castEffect: 2
@@ -25,7 +25,7 @@ MonoBehaviour:
   competencing: 0
   isSlow: 0
   isStopped: 0
-  baseSpeed: 10
+  baseSpeed: 7
   speedOverLifetime:
     serializedVersion: 2
     m_Curve:
@@ -51,25 +51,62 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   size: 1
-  lifeTime: 1.5
+  lifeTime: 7
   bulletsAngle:
   - floatArray:
     - -12
+    - -10
+    - -8
     - -6
+    - -4
+    - -2
     - 0
+    - 2
+    - 4
     - 6
+    - 8
+    - 10
     - 12
   - floatArray:
+    - -36
+    - -34
+    - -32
+    - -30
+    - -28
+    - -26
+    - -24
+    - -22
+    - -20
+    - -18
+    - -16
+    - -14
     - -12
-    - -6
-    - 0
-    - 6
     - 12
+    - 14
+    - 16
+    - 18
+    - 20
+    - 22
+    - 24
+    - 26
+    - 28
+    - 30
+    - 32
+    - 34
+    - 36
   - floatArray:
     - -12
+    - -10
+    - -8
     - -6
+    - -4
+    - -2
     - 0
+    - 2
+    - 4
     - 6
+    - 8
+    - 10
     - 12
   intervalleTime: 0.5
   bulletToInstantiate: {fileID: 0}

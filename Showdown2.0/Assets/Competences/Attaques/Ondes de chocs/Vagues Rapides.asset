@@ -25,7 +25,7 @@ MonoBehaviour:
   competencing: 0
   isSlow: 0
   isStopped: 0
-  baseSpeed: 12
+  baseSpeed: 4
   speedOverLifetime:
     serializedVersion: 2
     m_Curve:
@@ -55,12 +55,52 @@ MonoBehaviour:
   bulletsAngle:
   - floatArray:
     - 5
+    - 4
+    - 3
+    - 2
+    - 1
     - 0
+    - -1
+    - -2
+    - -3
+    - -4
     - -5
   - floatArray:
     - 5
+    - 4
+    - 3
+    - 2
+    - 1
     - 0
+    - -1
+    - -2
+    - -3
+    - -4
     - -5
-  intervalleTime: 0.75
+  - floatArray:
+    - 5
+    - 4
+    - 3
+    - 2
+    - 1
+    - 0
+    - -1
+    - -2
+    - -3
+    - -4
+    - -5
+  - floatArray:
+    - 5
+    - 4
+    - 3
+    - 2
+    - 1
+    - 0
+    - -1
+    - -2
+    - -3
+    - -4
+    - -5
+  intervalleTime: 0.7
   bulletToInstantiate: {fileID: 0}
   bulletPrefab: {fileID: 7290033593211575813, guid: f043745fb10f9b04393190bb0a3dfc93, type: 3}

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: HeavyTP
   m_EditorClassIdentifier: 
   playerManager: {fileID: 0}
-  cooldownTime: 8
+  cooldownTime: 4
   cooldownTimer: 0
-  castTime: 0.5
+  castTime: 0.2
   castEffect: 2
   casting: 0
   stunDuringEffect: 0

@@ -26,6 +26,6 @@ MonoBehaviour:
   isSlow: 0
   isStopped: 0
   coverPrefab: {fileID: 4244462563110614476, guid: 79b45dc737e9d5a46940c066c1bfb0d4, type: 3}
-  size: 1.5
+  size: 3
   distance: 4
-  coverLife: 4
+  coverLife: 6

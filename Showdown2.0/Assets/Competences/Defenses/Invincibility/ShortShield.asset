@@ -19,10 +19,10 @@ MonoBehaviour:
   castEffect: 0
   casting: 0
   stunDuringEffect: 0
-  recoveryTime: 1
+  recoveryTime: 0.5
   recoveryEffect: 2
   recovering: 0
   competencing: 0
   isSlow: 0
   isStopped: 0
-  duration: 1
+  duration: 0.2

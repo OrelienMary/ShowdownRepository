@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ConsecutiveShot
   m_EditorClassIdentifier: 
   playerManager: {fileID: 0}
-  cooldownTime: 0.8
+  cooldownTime: 1
   cooldownTimer: 0
   castTime: 0
   castEffect: 0
@@ -25,7 +25,7 @@ MonoBehaviour:
   competencing: 0
   isSlow: 0
   isStopped: 0
-  baseSpeed: 17.5
+  baseSpeed: 20
   speedOverLifetime:
     serializedVersion: 2
     m_Curve:
@@ -59,6 +59,20 @@ MonoBehaviour:
     - 0
   - floatArray:
     - 0
-  intervalleTime: 0.2
+  - floatArray:
+    - 0
+  - floatArray:
+    - 0
+  - floatArray:
+    - 0
+  - floatArray:
+    - 0
+  - floatArray:
+    - 0
+  - floatArray:
+    - 0
+  - floatArray:
+    - 0
+  intervalleTime: 0.05
   bulletToInstantiate: {fileID: 0}
   bulletPrefab: {fileID: 7290033593211575813, guid: f043745fb10f9b04393190bb0a3dfc93, type: 3}

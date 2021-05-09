@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Gros choc
   m_EditorClassIdentifier: 
   playerManager: {fileID: 0}
-  cooldownTime: 4
+  cooldownTime: 2
   cooldownTimer: 0
-  castTime: 1
+  castTime: 0.5
   castEffect: 2
   casting: 0
   stunDuringEffect: 0
@@ -25,7 +25,7 @@ MonoBehaviour:
   competencing: 0
   isSlow: 0
   isStopped: 0
-  baseSpeed: 7.5
+  baseSpeed: 7
   speedOverLifetime:
     serializedVersion: 2
     m_Curve:
@@ -51,18 +51,27 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   size: 1
-  lifeTime: 2
+  lifeTime: 7
   bulletsAngle:
   - floatArray:
     - -27
+    - -24
     - -21
+    - -18
     - -15
+    - -12
     - -9
+    - -6
     - -3
+    - 0
     - 3
+    - 6
     - 9
+    - 12
     - 15
+    - 18
     - 21
+    - 24
     - 27
   intervalleTime: 0
   bulletToInstantiate: {fileID: 0}

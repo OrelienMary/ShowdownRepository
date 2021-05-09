@@ -10,21 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff0257710aa3ba14388aa1ba19ac1880, type: 3}
-  m_Name: FastBullet
+  m_Name: DoubleSniper
   m_EditorClassIdentifier: 
   playerManager: {fileID: 0}
-  cooldownTime: 0.5
+  cooldownTime: 1.5
   cooldownTimer: 0
-  castTime: 0
-  castEffect: 0
+  castTime: 0.5
+  castEffect: 1
   casting: 0
   stunDuringEffect: 0
-  recoveryTime: 0
-  recoveryEffect: 0
+  recoveryTime: 0.5
+  recoveryEffect: 1
   recovering: 0
+  competencing: 0
   isSlow: 0
   isStopped: 0
-  baseSpeed: 15
+  baseSpeed: 40
   speedOverLifetime:
     serializedVersion: 2
     m_Curve:
@@ -49,7 +50,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  size: 0.5
+  size: 2
   lifeTime: 5
+  bulletsAngle:
+  - floatArray:
+    - 0
+  - floatArray:
+    - 0
+  intervalleTime: 0.2
   bulletToInstantiate: {fileID: 0}
   bulletPrefab: {fileID: 7290033593211575813, guid: f043745fb10f9b04393190bb0a3dfc93, type: 3}

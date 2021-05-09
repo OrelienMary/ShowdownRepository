@@ -25,5 +25,5 @@ MonoBehaviour:
   competencing: 0
   isSlow: 0
   isStopped: 0
-  boostMultiplier: 2.5
+  boostMultiplier: 2
   duration: 5

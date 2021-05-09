@@ -13,19 +13,19 @@ MonoBehaviour:
   m_Name: SniperInstant
   m_EditorClassIdentifier: 
   playerManager: {fileID: 0}
-  cooldownTime: 5
+  cooldownTime: 2.5
   cooldownTimer: 0
-  castTime: 0.2
-  castEffect: 1
+  castTime: 0
+  castEffect: 0
   casting: 0
   stunDuringEffect: 0
-  recoveryTime: 2
+  recoveryTime: 1
   recoveryEffect: 1
   recovering: 0
   competencing: 0
   isSlow: 0
   isStopped: 0
-  baseSpeed: 30
+  baseSpeed: 40
   speedOverLifetime:
     serializedVersion: 2
     m_Curve:
@@ -50,7 +50,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  size: 0.8
+  size: 1.5
   lifeTime: 5
   bulletsAngle: []
   intervalleTime: 0

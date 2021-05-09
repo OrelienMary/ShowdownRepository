@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shotgun
   m_EditorClassIdentifier: 
   playerManager: {fileID: 0}
-  cooldownTime: 3
+  cooldownTime: 1.5
   cooldownTimer: 0
   castTime: 0.5
   castEffect: 1
@@ -25,7 +25,7 @@ MonoBehaviour:
   competencing: 0
   isSlow: 0
   isStopped: 0
-  baseSpeed: 15
+  baseSpeed: 35
   speedOverLifetime:
     serializedVersion: 2
     m_Curve:
@@ -51,7 +51,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   size: 0.7
-  lifeTime: 0.5
+  lifeTime: 0.25
   bulletsAngle:
   - floatArray:
     - -15

@@ -23,7 +23,7 @@ public class PMovement : MonoBehaviour
     float verticalHeavy;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         baseSpeed = speed;
 

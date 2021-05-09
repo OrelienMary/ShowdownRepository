@@ -30,7 +30,7 @@ public class BulletController : MonoBehaviour
     {
         transform.localScale = new Vector3(size, size, size);
 
-        rb.velocity = direction * baseVelocity * velocityMultiplierOverLifeTime.Evaluate(originalLifeTime - lifeTime);
+        rb.velocity = direction * baseVelocity * velocityMultiplierOverLifeTime.Evaluate((originalLifeTime - lifeTime)/ originalLifeTime);
 
         lifeTime -= Time.fixedDeltaTime;
 

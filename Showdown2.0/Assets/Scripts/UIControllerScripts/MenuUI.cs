@@ -12,6 +12,7 @@ public class MenuUI : MonoBehaviour
     public StandaloneInputModule standaloneInput;
 
     public BuildUIController buildSelected;
+    public BuildUIController[] builds;
 
     public Slider sliderSpeedLife;
 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerInput : MonoBehaviour
 {
     public PlayerManager playerManager;
+    public LineRenderer aimRenderer;
 
     [HideInInspector] public float horizontal;
     [HideInInspector] public float vertical;
@@ -25,7 +26,13 @@ public class PlayerInput : MonoBehaviour
     private void Start()
     {
         aimDirection = Vector3.forward;
-        
+
+        Invoke("ValidateMenuInput", 0.2f);
+    }
+
+    public void ValidateMenuInput()
+    {
+        menuInput = true;
     }
 
     // Update is called once per frame
@@ -121,5 +128,8 @@ public class PlayerInput : MonoBehaviour
         {
             playerManager.anim.SetBool("Casting", false);
         }
+        //+new Vector3(0f, 0f, -1f)
+        aimRenderer.SetPosition(0, transform.position + (aimDirection * 30f));
+        aimRenderer.SetPosition(1, transform.position );
     }
 }

@@ -13,16 +13,17 @@ MonoBehaviour:
   m_Name: ShortDash
   m_EditorClassIdentifier: 
   playerManager: {fileID: 0}
-  cooldownTime: 3
+  cooldownTime: 2
   cooldownTimer: 0
   castTime: 0
   castEffect: 0
   casting: 0
   stunDuringEffect: 0
-  recoveryTime: 0
-  recoveryEffect: 0
+  recoveryTime: 0.2
+  recoveryEffect: 1
   recovering: 0
+  competencing: 0
   isSlow: 0
   isStopped: 0
-  speed: 20
+  speed: 50
   duration: 0.1

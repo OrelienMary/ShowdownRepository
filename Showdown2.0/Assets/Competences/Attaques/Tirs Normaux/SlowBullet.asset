@@ -32,26 +32,35 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -7.0833335
+      outSlope: -7.0833335
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.12
+      value: 0.15
+      inSlope: 0.016440867
+      outSlope: 0.016440867
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.22821969
     - serializedVersion: 3
       time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 34
+      value: 0.15
+      inSlope: 0.0065312483
+      outSlope: 0.0065312483
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.2462121
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  size: 0.8
-  lifeTime: 5
+  size: 1.2
+  lifeTime: 10
   bulletsAngle: []
   intervalleTime: 0
   bulletToInstantiate: {fileID: 0}

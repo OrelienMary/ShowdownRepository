@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
+    public static PlayerManager pM;
+
     public PlayerInput playerInput;
     public PMovement pMovement;
     public Phase2Controller phase2Controller;
@@ -64,7 +66,6 @@ public class PlayerManager : MonoBehaviour
 
         InitiateValues();
     }
-
 
     private void Update()
     {
@@ -192,6 +193,8 @@ public class PlayerManager : MonoBehaviour
 
     public void Die()
     {
+        RespawnManager.rM.Respawn();
+
         Debug.Log("Dead");
     }
 

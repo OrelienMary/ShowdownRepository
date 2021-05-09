@@ -10,46 +10,67 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff0257710aa3ba14388aa1ba19ac1880, type: 3}
-  m_Name: SniperHeavy
+  m_Name: PingPongBullet
   m_EditorClassIdentifier: 
   playerManager: {fileID: 0}
-  cooldownTime: 4
+  cooldownTime: 0.5
   cooldownTimer: 0
-  castTime: 1
-  castEffect: 2
+  castTime: 0
+  castEffect: 0
   casting: 0
   stunDuringEffect: 0
-  recoveryTime: 1
-  recoveryEffect: 1
+  recoveryTime: 0
+  recoveryEffect: 0
   recovering: 0
+  competencing: 0
   isSlow: 0
   isStopped: 0
-  baseSpeed: 22
+  baseSpeed: 15
   speedOverLifetime:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 34
+      inSlope: 17.576197
+      outSlope: 17.576197
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.29439998
     - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 34
+      time: 0.075
+      value: 2.5
+      inSlope: -0.016662268
+      outSlope: -0.016662268
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.44673437
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.14
+      value: 0.05403042
+      inSlope: -42.530933
+      outSlope: -42.530933
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.2490114
+    - serializedVersion: 3
+      time: 0.225
+      value: -3
+      inSlope: -27.142838
+      outSlope: -27.142838
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.3300732
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  size: 1.5
+  size: 0.75
   lifeTime: 5
+  bulletsAngle: []
+  intervalleTime: 0
   bulletToInstantiate: {fileID: 0}
   bulletPrefab: {fileID: 7290033593211575813, guid: f043745fb10f9b04393190bb0a3dfc93, type: 3}

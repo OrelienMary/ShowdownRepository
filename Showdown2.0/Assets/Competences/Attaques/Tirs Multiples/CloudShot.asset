@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CloudShot
   m_EditorClassIdentifier: 
   playerManager: {fileID: 0}
-  cooldownTime: 6
+  cooldownTime: 3
   cooldownTimer: 0
   castTime: 0.5
   castEffect: 2
@@ -32,23 +32,14 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 1
-      inSlope: -0.21559367
-      outSlope: -0.21559367
+      inSlope: -22.526957
+      outSlope: -22.526957
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.123046845
-      value: 0.9734719
-      inSlope: -0.37653178
-      outSlope: -0.37653178
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.59791654
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.2655968
+      time: 0.03
       value: 0.32419133
       inSlope: -0.19293515
       outSlope: -0.19293515
@@ -59,8 +50,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0.99163187
       value: 0.1014151
-      inSlope: -0.3068395
-      outSlope: -0.3068395
+      inSlope: -0.23166478
+      outSlope: -0.23166478
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -68,7 +59,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  size: 1
+  size: 1.5
   lifeTime: 5
   bulletsAngle:
   - floatArray:
