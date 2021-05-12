@@ -11,7 +11,7 @@ public class RespawnManager : MonoBehaviour
 
     Competence[][][] playerCompetences;
 
-    float[] percentagesSpeedHealth = new float[2];
+    float[] percentagesSpeedHealth;
 
     private void Awake()
     {
@@ -24,6 +24,8 @@ public class RespawnManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        percentagesSpeedHealth = new float[playerManagers.Length];
 
         playerCompetences = new Competence[playerManagers.Length][][];
 

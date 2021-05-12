@@ -38,7 +38,10 @@ public class PlayerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerManager.inGame == false)
+        if (playerManager.dead == true)
+            return;
+
+        if (playerManager.inGame == false)
         {
 
             if (menuInput == false)

@@ -4,6 +4,18 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Scenes/ChoosePlayerScene.unity
+    guid: 37bd2a87227dea24da5e19d24379aa96
+  - enabled: 1
+    path: Assets/_Scenes/Scene2Player.unity
+    guid: 03e54930c7ba69e408fe75ade1b29ff9
+  - enabled: 1
+    path: Assets/_Scenes/Scene3Player.unity
+    guid: a65ec846d1fc3f9468d139a9b46d93a8
+  - enabled: 1
+    path: Assets/_Scenes/Scene4Player.unity
+    guid: 79973cce7c18f5f469b3453f62499192
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4c0a21adf151d784f99819e3755070d3, type: 2}

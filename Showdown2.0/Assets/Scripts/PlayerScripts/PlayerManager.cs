@@ -59,6 +59,8 @@ public class PlayerManager : MonoBehaviour
 
     public Text healthText;
 
+    public bool dead;
+
     private void Start()
     {
         baseMaxHealth = maxHealth;
@@ -193,9 +195,18 @@ public class PlayerManager : MonoBehaviour
 
     public void Die()
     {
-        RespawnManager.rM.Respawn();
+        dead = true;
 
-        Debug.Log("Dead");
+        int alives = 0;
+
+        for(int i = 0; i < RespawnManager.rM.playerManagers.Length; i++)
+        {
+            if (RespawnManager.rM.playerManagers[i].dead == false)
+                alives++;
+        }
+
+        if(alives <= 1)
+            RespawnManager.rM.Respawn();
     }
 
     public void InitiateValues()

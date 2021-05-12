@@ -19,6 +19,8 @@ public class PlayerUI : MonoBehaviour
 
     List<HealthPoint> healthPoints = new List<HealthPoint>();
 
+    public Image deathImage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -168,6 +170,9 @@ public class PlayerUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (playerManager.dead)
+            deathImage.enabled = true;
+
         switchCooldown.fillAmount = playerManager.switchCooldownTimer / playerManager.switchCooldown;
         buildText.text = playerManager.buildNumber.ToString();
 

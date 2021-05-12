@@ -15,10 +15,22 @@ public class BulletController : MonoBehaviour
 
     float originalLifeTime;
 
-    
+    public ParticleSystem pSystem;
+    ParticleSystem.MainModule mainParticleSystem;
+    float baseSize;
+
+    public ParticleSystem smokePSystem;
+    ParticleSystem.MainModule smokeMainParticleSystem;
+    float smokeBaseSize;
 
     private void Start()
     {
+        mainParticleSystem = pSystem.main;
+        baseSize = mainParticleSystem.startSizeMultiplier;
+
+        smokeMainParticleSystem = smokePSystem.main;
+        smokeBaseSize = mainParticleSystem.startSizeMultiplier;
+
         originalLifeTime = lifeTime;
 
         transform.localScale = new Vector3(size, size, size);
@@ -28,6 +40,9 @@ public class BulletController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        mainParticleSystem.startSizeMultiplier = baseSize * size;
+        smokeMainParticleSystem.startSizeMultiplier = smokeBaseSize * size;
+
         transform.localScale = new Vector3(size, size, size);
 
         rb.velocity = direction * baseVelocity * velocityMultiplierOverLifeTime.Evaluate((originalLifeTime - lifeTime)/ originalLifeTime);
